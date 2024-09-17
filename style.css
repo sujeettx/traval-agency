@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0A2340;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 100%;
+    max-width:100%;
+    margin: 0 auto;
+    padding: 0 2vw;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 0;
+}
+
+.logo {
+    font-size: 2vw;
+    font-weight: bold;
+    color: #FFA500;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2vw;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1vw;
+}
+
+.cta-button {
+    background-color: #FFA500;
+    color: #0A2340;
+    padding: 1vh 2vw;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1vw;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vh 0;
+    background-image: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 80vh;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 35, 64, 0.7);
+}
+
+.hero-content {
+    max-width: 50%;
+    position: relative;
+    z-index: 1;
+    padding: 0 2vw;
+}
+
+.hero h1 {
+    font-size: 4vw;
+    margin-bottom: 2vh;
+}
+
+.hero p {
+    margin-bottom: 3vh;
+    font-size: 1.2vw;
+}
+
+.hero-image {
+    max-width: 40%;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Destinations Section */
+.destinations {
+    padding: 5vh 0;
+}
+
+.destinations h2 {
+    font-size: 3vw;
+    margin-bottom: 3vh;
+}
+
+.destination-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.destination-card {
+    width: 30%;
+    background-color: #0D2E4D;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 3vh;
+}
+
+.destination-card img {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+
+.destination-info {
+    padding: 2vh;
+}
+
+.destination-info h3 {
+    margin-bottom: 1vh;
+    font-size: 1.5vw;
+}
+
+.destination-info p {
+    margin-bottom: 2vh;
+    font-size: 1vw;
+}
+
+.rating {
+    color: #FFA500;
+    margin-bottom: 1vh;
+    font-size: 1vw;
+}
+
+/* Stories Section */
+.stories {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5vh 0;
+}
+
+.stories-content {
+    max-width: 50%;
+}
+
+.stories h2 {
+    font-size: 3vw;
+    margin-bottom: 2vh;
+}
+
+.stories p {
+    font-size: 1.2vw;
+    margin-bottom: 2vh;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3vh;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2vw;
+    color: #FFA500;
+}
+
+.stat-item p {
+    font-size: 1vw;
+}
+
+.stories-image {
+    max-width: 33%;
+}
+
+.stories-image img {
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* Start Adventure Section */
+.start-adventure {
+    text-align: center;
+    padding: 5vh 0;
+}
+
+.start-adventure h2 {
+    font-size: 3vw;
+    margin-bottom: 2vh;
+}
+
+.start-adventure p {
+    font-size: 1.2vw;
+    margin-bottom: 2vh;
+}
+.start-adventure a{
+    margin-top: 4vw;
+}
+
+.adventure-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+    justify-content: center;
+
+    display: flex;
+}
+
+.adventure-icon {
+    margin: 0 2vw;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #FFA500;
+}
+
+.adventure-icon img {
+    width: 5vw;
+    height: 5vw;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .hero-content, .hero-image, .stories-content, .stories-image {
+        max-width: 100%;
+    }
+
+    .destination-card {
+        width: 100%;
+    }
+
+    .hero, .stories {
+        flex-direction: column;
+    }
+
+    .hero h1, .stories h2, .start-adventure h2 {
+        font-size: 6vw;
+    }
+
+    .hero p, .stories p, .start-adventure p {
+        font-size: 3vw;
+    }
+
+    nav ul li a, .cta-button {
+        font-size: 3vw;
+    }
+
+    .destination-info h3 {
+        font-size: 4vw;
+    }
+
+    .destination-info p, .rating {
+        font-size: 3vw;
+    }
+
+    .stat-item h3 {
+        font-size: 5vw;
+    }
+
+    .stat-item p {
+        font-size: 3vw;
+    }
+
+    .adventure-icon img {
+        width: 10vw;
+        height: 10vw;
+    }
+}
